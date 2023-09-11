@@ -19,5 +19,5 @@
 getprop init.svc.bootanim
 
 # -f 
-文件函数，例如：-f "/dab/BOX/01start.sh"。
+文件参数，例如：-f "/dab/BOX/01start.sh"。
 查询文件是否存在。
