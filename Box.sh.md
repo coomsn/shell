@@ -15,7 +15,7 @@
 # 01start.sh
 ```
 
-# 读取开机动画函数
+# 查询内存里面的开机动画函数
 getprop init.svc.bootanim
 
 # -f 
