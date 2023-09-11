@@ -13,7 +13,7 @@
     fi
 )&
 
-# 01sing-box service
+# sing-box service
 ```
 
 # 查询内存里面的开机动画函数
