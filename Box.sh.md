@@ -7,12 +7,13 @@
     done
 
     if [ -f "/data/Box/01start.sh" ]; then
-        chmod 755 /data/Box/*
+        chmod -R 755 /data/Box/*
+        chown -R root:root /data/Box/*
         /data/Box/01start.sh
     fi
 )&
 
-# 01start.sh
+# 01sing-box service
 ```
 
 # 查询内存里面的开机动画函数
