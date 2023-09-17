@@ -1,20 +1,21 @@
 ```
 #!/system/bin/sh
-
+path=/data/box_kernel/
+kernel_bin=/data/box_kernel/sing-box
+config_file=/data/box_kernel/box.json
+log_file=/data/box_kernel/src/log/box.log
 # 删除日志
-find . -size +1M -name "*.log" -exec rm -rf {} \;
+find ${path}* -size +1M -name "*.log" -exec rm -rf {} \;
 
 # 清除并重启 sing-box 进程
-if pgrep sing-box > /dev/null; then
+if pgrep sing-box>/dev/null 2>&1; then
   kill -9 $(pidof sing-box)
-#  rm -rf /data/Box/src/*.db
-  echo -e "\033[1;32mSB进程已清理并重启！\033[0m"
-  /data/Box/sing-box run -c ./box.json -D /data/Box/
+  echo -e "\033[1;32m1.杀掉并重启sing-box进程！\033[0m"
+  ${kernel_bin} run -c ${config_file} -D ${path}>/dev/null 2>&1
 else
-#  rm -rf /data/Box/src/*.db
-  echo -e "\033[1;32mSB进程未启动，启动进程！\033[0m"
-  /data/Box/sing-box run -c ./box.json -D /data/Box/
+  echo -e "\033[1;32m2.启动sing-box进程！\033[0m"
+  ${kernel_bin} run -c ${config_file} -D ${path}>/dev/null 2>&1
 fi
 
-# 01start.sh
+# Start.sh
 ```
