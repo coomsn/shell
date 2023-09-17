@@ -23,5 +23,5 @@ path=/data/box_kernel/
 getprop init.svc.bootanim
 
 # -f 
-文件参数，例如：-f "/dab/BOX/01start.sh"。
+文件参数，例如：-f "/dab/box_kernel/01start.sh"。
 查询文件是否存在。
