@@ -1,3 +1,4 @@
+```
 #!/system/bin/sh
 
 (
@@ -36,3 +37,4 @@ done
 )&
 
 # crond service
+```
